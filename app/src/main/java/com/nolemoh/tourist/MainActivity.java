@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
         if(Build.VERSION.SDK_INT >=23 && (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED || ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED)) {
             ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, 1);
         }
-        webview.loadUrl("http://www.erhii.com");
+        webview.loadUrl("http://www.erhii.com:8080");
 
         //设置不用系统浏览器打开,直接显示在当前Webview
         webview.setWebViewClient(new MyWebViewClient(this));
